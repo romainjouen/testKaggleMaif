@@ -1,3 +1,4 @@
+#yo!!!!!!!!!!!!!!
 library(data.table)
 library(ade4)
 library(tree)
@@ -18,7 +19,7 @@ output <- maif_train$prime_tot_ttc
 # CREATION DES CLUSTERS :
 # ::::::::::::::::::::::::::::
 
-# définir le nombre de clusters N : 
+# dÃ©finir le nombre de clusters N : 
 N <- 30
 q <- c(0,quantile(output, probs = seq(0, 1, by = 1/N)),1e9)
 # clus <- cut(output,
@@ -37,7 +38,7 @@ d_clus[,clus:=as.character(clus)]
 # PROJECTION SUR 3 AXES TyPE ANALYSE DISCRIMINANTES 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Centrage et réduction 
+# Centrage et rÃ©duction 
 # ///////////////////////////
 train_in <- d_clus[, !c("prime_tot_ttc","clus"), with=FALSE]
 train_out <- d_clus$clus
